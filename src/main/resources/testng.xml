@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SeleniumJavaFramework"><parameter name="TestMethod1" value="Resources\\TestMethod1.xls"/><test name="testing"><classes><class name="com.framework.tests.TestCases"><methods><include name="TestMethod1"/></methods></class></classes></test></suite>
