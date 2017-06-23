@@ -14,17 +14,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * extends from this class.
  */
 public class HtmlElement {
-    private enum LocatorType {
-        ID, NAME, CLASS_NAME, LINK_TEXT, PARTIAL_LINK_TEXT, CSS_SELECTOR,
-        TAG_NAME, XPATH,
-    }
-
     protected WebDriver driver = null;
     protected WebElement element = null;
     private String label = null;
     private String locator = null;
     private By by = null;
-
     public HtmlElement(final String label, final By by) {
         this.label = label;
         this.by = by;
@@ -51,7 +45,6 @@ public class HtmlElement {
         findElement();
         element.click();
     }
-
 
     private By getLocatorBy(final String locator, final LocatorType locatorType) {
 
@@ -129,5 +122,10 @@ public class HtmlElement {
                 return driver.findElement(by);
             }
         });
+    }
+
+    private enum LocatorType {
+        ID, NAME, CLASS_NAME, LINK_TEXT, PARTIAL_LINK_TEXT, CSS_SELECTOR,
+        TAG_NAME, XPATH,
     }
 }

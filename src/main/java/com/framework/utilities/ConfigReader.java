@@ -1,6 +1,7 @@
 package com.framework.utilities;
 
 import com.framework.driver.BrowserType;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;

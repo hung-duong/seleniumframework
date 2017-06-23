@@ -7,6 +7,12 @@ public enum BrowserType {
     HtmlUnit("*htmlunit"),
     Safari("*safari");
 
+    private String browserType;
+
+    BrowserType(final String type) {
+        this.browserType = type;
+    }
+
     public static BrowserType getBrowserType(final String browserType) {
         if (browserType.equalsIgnoreCase("*firefox") || browserType.equalsIgnoreCase("firefox")) {
             return BrowserType.FireFox;
@@ -21,12 +27,6 @@ public enum BrowserType {
         } else {
             return BrowserType.FireFox;
         }
-    }
-
-    private String browserType;
-
-    BrowserType(final String type) {
-        this.browserType = type;
     }
 
     public String getBrowserType() {

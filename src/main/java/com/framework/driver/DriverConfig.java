@@ -29,12 +29,12 @@ public class DriverConfig {
         this.mode = mode;
     }
 
-    public void setImplicitWaitTimeout(final double implicitWaitTimeout) {
-        this.implicitWaitTimeout = implicitWaitTimeout;
-    }
-
     public double getImplicitWaitTimeout() {
         return implicitWaitTimeout;
+    }
+
+    public void setImplicitWaitTimeout(final double implicitWaitTimeout) {
+        this.implicitWaitTimeout = implicitWaitTimeout;
     }
 
     public int getExplicitWaitTimeout() {

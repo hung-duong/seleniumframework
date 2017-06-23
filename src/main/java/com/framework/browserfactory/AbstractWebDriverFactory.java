@@ -42,8 +42,16 @@ public abstract class AbstractWebDriverFactory {
         return driver;
     }
 
+    public void setWebDriver(final WebDriver driver) {
+        this.driver = driver;
+    }
+
     public DriverConfig getWebDriverConfig() {
         return webDriverConfig;
+    }
+
+    public void setWebDriverConfig(final DriverConfig cfg) {
+        this.webDriverConfig = cfg;
     }
 
     public void setImplicitWaitTimeout(final double timeout) {
@@ -56,13 +64,5 @@ public abstract class AbstractWebDriverFactory {
                 ex.printStackTrace();
             }
         }
-    }
-
-    public void setWebDriver(final WebDriver driver) {
-        this.driver = driver;
-    }
-
-    public void setWebDriverConfig(final DriverConfig cfg) {
-        this.webDriverConfig = cfg;
     }
 }

@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Created by hungduong
  */
-public class PageObject extends BasePage implements IPage{
+public class PageObject extends BasePage implements IPage {
     //Element to identify the page
     private HtmlElement pageIdentifierElement = null;
     private String title = null;
@@ -48,12 +48,12 @@ public class PageObject extends BasePage implements IPage{
         return driver;
     }
 
-    protected void setUrl(final String openUrl) {
-        this.url = openUrl;
-    }
-
     public String getUrl() {
         return url;
+    }
+
+    protected void setUrl(final String openUrl) {
+        this.url = openUrl;
     }
 
     public String getLocation() {
@@ -74,7 +74,7 @@ public class PageObject extends BasePage implements IPage{
         Wait<WebDriver> wait = new WebDriverWait(driver, 30);
         try {
             wait.until(expection);
-        } catch(Throwable error) {
+        } catch (Throwable error) {
             error.printStackTrace();
         }
 
